@@ -1,7 +1,7 @@
 import TagManager from "react-gtm-module";
 
 export const args = {
-  gtmId: "",
+  gtmId: 'GTM-5X7Q27W',
 };
 
 export const init = (args) => {
