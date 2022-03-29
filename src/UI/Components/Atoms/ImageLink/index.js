@@ -7,12 +7,19 @@ import Styles from './styles';
 const ImageLink = ({ src, alt, link }) => {
   return (
     <Styles>
-      <Link to={link}>
+      {link ? (
+        <Link to={link}>
+          <Img
+            src={src}
+            alt={alt}
+          />
+        </Link>
+      ) : (
         <Img
           src={src}
           alt={alt}
         />
-      </Link>
+      )}
     </Styles>
   );
 }
@@ -20,11 +27,12 @@ const ImageLink = ({ src, alt, link }) => {
 ImageLink.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string
 }
 
 ImageLink.defaultProps = {
-  alt: 'image'
+  alt: 'image',
+  link: null
 }
 
 export default ImageLink;

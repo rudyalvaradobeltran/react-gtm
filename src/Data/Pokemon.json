@@ -1,0 +1,52 @@
+{
+  "pokemon": [
+    {
+      "fire": [
+        {
+          "id": 1,
+          "name": "charmander"
+        },
+        {
+          "id": 2,
+          "name": "cyndaquil"
+        },
+        {
+          "id": 3,
+          "name": "torchic"
+        }
+      ]
+    },
+    {
+      "water": [
+        {
+          "id": 4,
+          "name": "squirtle"
+        },
+        {
+          "id": 5,
+          "name": "totodile"
+        },
+        {
+          "id": 6,
+          "name": "mudkip"
+        }
+      ]
+    },
+    {
+      "grass": [
+        {
+          "id": 7,
+          "name": "bulbasaur"
+        },
+        {
+          "id": 8,
+          "name": "chikorita"
+        },
+        {
+          "id": 9,
+          "name": "treecko"
+        }
+      ]
+    }
+  ]
+}
