@@ -1,0 +1,16 @@
+@import url(//db.onlinewebfonts.com/c/51ba22ae06790efd464bde752a2cd9d1?family=Flexo);
+
+@font-face {
+  font-family: "Flexo";
+  src: url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.eot");
+  src: url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/51ba22ae06790efd464bde752a2cd9d1.svg#Flexo")
+      format("svg");
+}

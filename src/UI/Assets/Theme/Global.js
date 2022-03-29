@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
   }
   .container {
     background: #fff url(${Container});
+    display: flex;
+    flex-direction: column;
     height: 100vh;
   }
 `;
