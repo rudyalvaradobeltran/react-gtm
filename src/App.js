@@ -20,6 +20,7 @@ const App = () => {
             <Route path="/pokemon-types" exact component={PokemonTypesContainer} />
             <Route path="/pokemons-by-type/:type" exact component={PokemonsByTypeContainer} />
             <Route path="/pokemon-by-name/:name" exact component={PokemonByNameContainer} />
+            <Route component={CharacterContainer} />
           </Switch>
         </Router>
       </Container>

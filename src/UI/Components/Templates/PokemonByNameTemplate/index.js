@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, Grid } from '@mui/material';
 import ImageLink from '../../Atoms/ImageLink';
 import Styles from './styles';
@@ -12,9 +12,16 @@ import mudkip from '../../../Assets/Images/Pokemon/Mudkip.png';
 import bulbasaur from '../../../Assets/Images/Pokemon/Bulbasaur.png';
 import chikorita from '../../../Assets/Images/Pokemon/Chikorita.png';
 import treecko from '../../../Assets/Images/Pokemon/Treecko.png';
+import PokemonList from '../../../../Data/PokemonList.json';
 
 const PokemonByNameTemplate = () => {
   const { name } = useParams();
+
+  useEffect(() => {
+    if (!(PokemonList.pokemons.includes(name))) {
+      window.location.href = '/';
+    }
+  }, [name]);
 
   const pokemons = {
     charmander,
