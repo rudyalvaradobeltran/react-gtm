@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "env-cmd -f ./Config/Env/.env react-scripts start",
-    "build": "env-cmd -f ./Config/Env/.env npm run build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
