@@ -10,6 +10,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "encrypt-storage": "^2.2.6",
+    "env-cmd": "^10.1.0",
     "react": "^17.0.2",
     "react-cool-img": "^1.2.12",
     "react-dom": "^17.0.2",
