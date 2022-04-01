@@ -14,6 +14,9 @@ import bulbasaur from '../../../Assets/Images/Pokemon/Bulbasaur.png';
 import chikorita from '../../../Assets/Images/Pokemon/Chikorita.png';
 import treecko from '../../../Assets/Images/Pokemon/Treecko.png';
 import TypeList from '../../../../Data/TypeList.json';
+import { createDataLayer } from '../../../../Utils/TagManager';
+import { encryptStorage } from '../../../../Utils/EncryptStorage';
+import { capitalize } from '../../../../Utils';
 
 const PokemonsByTypeTemplate = () => {
   const { type } = useParams();
@@ -21,6 +24,8 @@ const PokemonsByTypeTemplate = () => {
   useEffect(() => {
     if (!(TypeList.types.includes(type))) {
       window.location.href = '/';
+    } else {
+      createDataLayer(`Pokemons by types - ${capitalize(type)}`, `/pokemons-by-type/${type}`, encryptStorage.getItem('c'));
     }
   }, [type]);
 

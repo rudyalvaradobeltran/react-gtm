@@ -1,25 +1,26 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import Img from 'react-cool-img';
-import { Link } from 'react-router-dom';
 import Styles from './styles';
 
-const ImageLink = ({ src, alt, link }) => {
+const ImageLink = ({ src, alt, link, onClick }) => {
+  const history = useHistory();
+  const handleClick = () => {
+    if (link) {
+      onClick();
+      history.push(link);
+    }
+  }
+
   return (
     <Styles>
-      {link ? (
-        <Link to={link}>
-          <Img
-            src={src}
-            alt={alt}
-          />
-        </Link>
-      ) : (
-        <Img
-          src={src}
-          alt={alt}
-        />
-      )}
+      <Img
+        className={!link ? 'image' : 'image-link'}
+        src={src}
+        onClick={() => handleClick()}
+        alt={alt}
+      />
     </Styles>
   );
 }
@@ -27,12 +28,14 @@ const ImageLink = ({ src, alt, link }) => {
 ImageLink.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
-  link: PropTypes.string
+  link: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 ImageLink.defaultProps = {
   alt: 'image',
-  link: null
+  link: null,
+  onClick: () => {}
 }
 
 export default ImageLink;

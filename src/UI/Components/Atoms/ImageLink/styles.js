@@ -6,6 +6,9 @@ const Styles = styled.div`
     object-fit: cover;
     width: 100%;
   }
+  .image-link:hover {
+    cursor: pointer;
+  }
 `;
 
 export default Styles;

@@ -13,6 +13,9 @@ import bulbasaur from '../../../Assets/Images/Pokemon/Bulbasaur.png';
 import chikorita from '../../../Assets/Images/Pokemon/Chikorita.png';
 import treecko from '../../../Assets/Images/Pokemon/Treecko.png';
 import PokemonList from '../../../../Data/PokemonList.json';
+import { createDataLayer } from '../../../../Utils/TagManager';
+import { encryptStorage } from '../../../../Utils/EncryptStorage';
+import { capitalize } from '../../../../Utils';
 
 const PokemonByNameTemplate = () => {
   const { name } = useParams();
@@ -20,6 +23,8 @@ const PokemonByNameTemplate = () => {
   useEffect(() => {
     if (!(PokemonList.pokemons.includes(name))) {
       window.location.href = '/';
+    } else {
+      createDataLayer(`Pokemon by name - ${capitalize(name)}`, `/pokemon-by-name/${name}`, encryptStorage.getItem('c'));
     }
   }, [name]);
 

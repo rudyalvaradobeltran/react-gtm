@@ -8,7 +8,6 @@ import PokemonsByTypeContainer from './UI/Containers/PokemonsByTypeContainer';
 import PokemonByNameContainer from './UI/Containers/PokemonByNameContainer';
 import GlobalStyles from './UI/Assets/Theme/Global';
 
-
 const App = () => {
   return (
     <React.Fragment>
